@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS|Sass</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,800%7CWork+Sans:200,300%7CJosefin+Sans:100" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/uikit.min.js" defer></script>
+    <script src="js/uikit-icons.min.js" defer></script>
+</head>
+
+<body class="uk-background-primary uk-light">
+
+
+    <div data-uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+
+        <nav class="uk-navbar-container uk-margin uk-light">
+            <div class="uk-container">
+                <div data-uk-navbar>
+                    <div class="uk-navbar-left">
+                        <a class="uk-navbar-item uk-logo uk-text-small" href="index.html">WORK NOTES</a>
+                    </div>
+                    <div class="uk-navbar-center uk-visible@m">
+
+                        <ul class="uk-navbar-nav">
+                            <li ><a href="index.html">Home</a></li>
+                        </ul>
+                    </div>
+                    <div class="uk-navbar-right">
+                        <a class="uk-navbar-toggle " href="#search" data-uk-search-icon data-uk-toggle></a>
+                        <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" data-uk-navbar-toggle-icon data-uk-toggle></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
+
+<section class="tm-margin-large-top">
+    <div class="uk-container">
+
+        <h1 class="uk-margin-medium-bottom uk-heading-hero">WordPress</h1>
+
+        <hr class="uk-margin-remove">
+    </div>
+</section>
+
+<div id="search" class="uk-flex-top uk-background-primary uk-modal-search" data-uk-modal>
+
+    <button class="uk-modal-close-full uk-close-large" type="button" data-uk-close></button>
+    <div class="uk-modal-dialog uk-text-center uk-margin-auto-vertical uk-padding-large">
+
+        <form class="uk-search uk-search-large uk-margin-auto">
+            <input class="uk-search-input uk-text-center" type="search" placeholder="Search..." autofocus>
+        </form>
+
+    </div>
+</div>
+
+
+<div id="offcanvas" data-uk-offcanvas="flip: true; overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" data-uk-close></button>
+
+        <ul class="uk-nav uk-nav-default">
+            <li class="uk-nav-header uk-logo">Minimal</li>
+            <li class="uk-parent">
+                <a href="index.html">Home</a>
+                <ul class="uk-nav-sub">
+                    <li><a href="green.html">Green</a></li>
+                    <li><a href="purple.html">Purple</a></li>
+                    <li><a href="red.html">Red</a></li>
+                    <li><a href="brown.html">Brown</a></li>
+                </ul>
+            </li
+        </ul>
+
+    </div>
+</div>
+
+<div class="wp-tables"><div class="wp-table-one">
+  <table>
+<tbody>
+<tr>
+<th>Basic Template Files</th>
+<th></th>
+</tr>
+<tr>
+<td>style.css</td>
+<td>Style sheet file</td>
+</tr>
+<tr>
+<td>index.php</td>
+<td>Home Page file</td>
+</tr>
+<tr>
+<td>single.php</td>
+<td>Single post page file</td>
+</tr>
+<tr>
+<td>archive.php</td>
+<td>Archive or Category file</td>
+</tr>
+<tr>
+<td>searchform.php</td>
+<td>Search form file</td>
+</tr>
+<tr>
+<td>search.php</td>
+<td>Search content file</td>
+</tr>
+<tr>
+<td>404.php</td>
+<td>Error page file</td>
+</tr>
+<tr>
+<td>comments.php</td>
+<td>Comments template file</td>
+</tr>
+<tr>
+<td>footer.php</td>
+<td>Footer content file</td>
+</tr>
+<tr>
+<td>header.php</td>
+<td>Header content file</td>
+</tr>
+<tr>
+<td>sidebar.php</td>
+<td>Sidebar content file</td>
+</tr>
+<tr>
+<td>page.php</td>
+<td>Single page file</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="wp-table-two">
+
+<div class="wp-table-three">
+  <table>
+<tbody>
+<tr>
+<th>PHP Snippets for Templates</th>
+<th></th>
+</tr>
+<tr>
+<td>
+the_content();
+</td>
+<td>Content of the posts</td>
+</tr>
+<tr>
+<td>
+if(have_posts()):
+</td>
+<td>Check if there are posts</td>
+</tr>
+<tr>
+<td>
+while(have_posts()): the_post();
+</td>
+<td>Shows posts if posts are available</td>
+</tr>
+<tr>
+<td>
+endwhile;
+</td>
+<td>Closes the &#8216;while&#8217; PHP function</td>
+</tr>
+<tr>
+<td>
+endif;
+</td>
+<td>Closes the &#8216;if&#8217; PHP function</td>
+</tr>
+<tr>
+<td>
+get_header();
+</td>
+<td>Header.php file&#8217;s content</td>
+</tr>
+<tr>
+<td>
+get_sidebar();
+</td>
+<td>Sidebar.php file&#8217;s content</td>
+</tr>
+<tr>
+<td>
+get_footer();
+</td>
+<td>Footer.php file&#8217;s content</td>
+</tr>
+<tr>
+<td>
+the_time('m-d-y');
+</td>
+<td>The date in &#8217;08-18-07&#8242; format</td>
+</tr>
+<tr>
+<td>
+comments_popup_link();
+</td>
+<td>Link for the comments on the post</td>
+</tr>
+<tr>
+<td>
+the_title()';
+</td>
+<td>Title of a specific post or page</td>
+</tr>
+<tr>
+<td>
+the_permalink();
+</td>
+<td>URL of a specific post or page</td>
+</tr>
+<tr>
+<td>
+the_category();
+</td>
+<td>Categor of a specific post or page</td>
+</tr>
+<tr>
+<td>
+the_author();
+</td>
+<td>Author of a specific post or page</td>
+</tr>
+<tr>
+<td>
+the_ID();
+</td>
+<td>ID of a specific post or page</td>
+</tr>
+<tr>
+<td>
+edit_post_link();
+</td>
+<td>Link to edit a specific post or page</td>
+</tr>
+<tr>
+<td>
+get_links_list();
+</td>
+<td>Links from the blogroll</td>
+</tr>
+<tr>
+<td>
+comments_template();
+</td>
+<td>Comment PHP file&#8217;s content</td>
+</tr>
+<tr>
+<td>
+wp_list_pages();
+</td>
+<td>List of pages of the site</td>
+</tr>
+<tr>
+<td>
+wp_list_cats();
+</td>
+<td>List of categories for the site</td>
+</tr>
+<tr>
+<td>
+next_post_link('%link');
+</td>
+<td>URL to the next post</td>
+</tr>
+<tr>
+<td>
+previoust_post_link('%link');
+</td>
+<td>URL to the previoust post</td>
+</tr>
+<tr>
+<td>
+get_calendar()'
+</td>
+<td>The built-in calendar</td>
+</tr>
+<tr>
+<td>
+wp_get_archives();
+</td>
+<td>List of archives for the site</td>
+</tr>
+<tr>
+<td>
+posts_nav_link();
+</td>
+<td>Next and previous post links</td>
+</tr>
+<tr>
+<td>
+bloginfo('description');
+</td>
+<td>Site&#8217;s description</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</body>
+
+</html>
